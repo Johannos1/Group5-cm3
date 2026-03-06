@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const vehicleRentalRouter = require('./routes/vehicleRentalRouter');
+const authRouter = require('./routes/authRouter');
 const { unknownEndpoint, errorHandler, requestLogger } = require('./middleware/customMiddleware');
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(requestLogger);
 
 // Routes
 app.use('/api/vehicleRentals', vehicleRentalRouter);
+app.use('/api/auth', authRouter);
 
 // Error handling
 app.use(unknownEndpoint);
