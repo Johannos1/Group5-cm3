@@ -13,15 +13,15 @@ const {
 router.get('/', getAllVehicleRentals);
 
 // POST /api/vehicleRentals
-router.post('/', createVehicleRental);
+router.post('/', auth, createVehicleRental);
 
 // GET /api/vehicleRentals/:vehicleRentalId
 router.get('/:vehicleRentalId', getVehicleRentalById);
 
 // PUT /api/vehicleRentals/:vehicleRentalId
-router.put('/:vehicleRentalId', updateVehicleRental);
+router.put('/:vehicleRentalId', auth, updateVehicleRental);
 
 // DELETE /api/vehicleRentals/:vehicleRentalId
-router.delete('/:vehicleRentalId', deleteVehicleRental);
+router.delete('/:vehicleRentalId', auth, deleteVehicleRental);
 
 module.exports = router;
