@@ -16,4 +16,6 @@ Individual Evaluation Requirements: Each team member must create separate docume
         Challenges with deploying in render. Got stuck after making connection with MongoDB database.
 
     Self-Grading (evaluation/self-grading/YourName.md)
-        Individual grade 80/80
+        Individual grade 60/80
+        Group grade 40/40
+
