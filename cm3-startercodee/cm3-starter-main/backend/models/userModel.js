@@ -5,29 +5,19 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-      minlength: 3,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-      lowercase: true,
-    },
-    password: {
-      type: String,
-      required: true,
-      minlength: 6,
+    name: { type: String, required: true },
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    phone_number: { type: String, required: true },
+    licenseNumber: { type: String, required: true, unique: true },
+    date_of_birth: { type: Date, required: true },
+    address: {
+      licenseExpiryDate: { type: Date, required: true },
+      city: { type: String, required: true },
+      yearsOfExperience: { type: Number, required: true },
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true, versionKey: false }
 );
 
 // Hash password before saving
@@ -51,3 +41,4 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 };
 
 module.exports = mongoose.model('User', userSchema);
+
