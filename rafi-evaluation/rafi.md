@@ -17,5 +17,6 @@ Individual Evaluation Requirements: Each team member must create separate docume
 
     Self-Grading (evaluation/self-grading/YourName.md)
         Individual grade 60/80
-        Group grade 40/40
+        Group grade 30/40
+
 
